@@ -13,7 +13,7 @@ export default function TrustMarquee() {
   const repeatedItems = [...items, ...items, ...items, ...items];
 
   return (
-    <div className="w-full bg-[#141414] border-y border-border-color py-6 overflow-hidden relative z-10">
+    <div className="w-full bg-secondary-bg border-y border-border-color py-6 overflow-hidden relative z-10">
       {/* Soft gradient masks on left and right for high-end look */}
       <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-primary-bg to-transparent pointer-events-none z-10" />
       <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-primary-bg to-transparent pointer-events-none z-10" />

@@ -139,7 +139,7 @@ export default function SEOCommandCenter() {
               <Layers className="w-4 h-4 text-bronze animate-pulse" />
               Real-time Business Intelligence
             </span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-[#F8F8F8]">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-heading">
               SEO COMMAND CENTER
             </h2>
             <p className="text-gray-text text-base md:text-lg max-w-2xl leading-relaxed">
@@ -163,7 +163,7 @@ export default function SEOCommandCenter() {
           <div className="lg:col-span-8 glass-panel rounded-2xl border border-border-color p-6 md:p-8 flex flex-col justify-between">
             <div className="flex justify-between items-center border-b border-border-color pb-6 mb-6">
               <div>
-                <h3 className="text-lg font-heading font-bold text-[#F8F8F8]">Growth Velocity</h3>
+                <h3 className="text-lg font-heading font-bold text-heading">Growth Velocity</h3>
                 <p className="text-xs text-gray-text mt-1">Real-time organic performance analytics</p>
               </div>
               
@@ -173,7 +173,7 @@ export default function SEOCommandCenter() {
                   onClick={() => setActiveTab("traffic")}
                   className={`px-4 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
                     activeTab === "traffic" 
-                      ? "bg-bronze text-[#F8F8F8]" 
+                      ? "bg-bronze text-heading" 
                       : "text-gray-text hover:text-white"
                   }`}
                 >
@@ -183,7 +183,7 @@ export default function SEOCommandCenter() {
                   onClick={() => setActiveTab("leads")}
                   className={`px-4 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
                     activeTab === "leads" 
-                      ? "bg-bronze text-[#F8F8F8]" 
+                      ? "bg-bronze text-heading" 
                       : "text-gray-text hover:text-white"
                   }`}
                 >
@@ -283,7 +283,7 @@ export default function SEOCommandCenter() {
               </div>
               <div className="mt-4">
                 <h4 className="text-[10px] uppercase tracking-[0.15em] text-gray-text font-bold">Visibility Score</h4>
-                <div className="text-2xl font-heading font-bold text-[#F8F8F8] mt-1">
+                <div className="text-2xl font-heading font-bold text-heading mt-1">
                   <CountUp end={liveData.visibilityScore} decimals={1} suffix="%" />
                 </div>
               </div>
@@ -297,7 +297,7 @@ export default function SEOCommandCenter() {
               </div>
               <div className="mt-4">
                 <h4 className="text-[10px] uppercase tracking-[0.15em] text-gray-text font-bold">Keywords Ranked</h4>
-                <div className="text-2xl font-heading font-bold text-[#F8F8F8] mt-1">
+                <div className="text-2xl font-heading font-bold text-heading mt-1">
                   <CountUp end={liveData.keywordsRanked} suffix="+" />
                 </div>
               </div>
@@ -311,7 +311,7 @@ export default function SEOCommandCenter() {
               </div>
               <div className="mt-4">
                 <h4 className="text-[10px] uppercase tracking-[0.15em] text-gray-text font-bold">Reviews Growth</h4>
-                <div className="text-2xl font-heading font-bold text-[#F8F8F8] mt-1">
+                <div className="text-2xl font-heading font-bold text-heading mt-1">
                   <CountUp end={liveData.rating} decimals={1} suffix="★" />
                 </div>
                 <p className="text-[9px] text-gray-text/60 mt-1">1,240 verified reviews</p>
@@ -326,7 +326,7 @@ export default function SEOCommandCenter() {
               </div>
               <div className="mt-4">
                 <h4 className="text-[10px] uppercase tracking-[0.15em] text-gray-text font-bold">Click-to-Calls</h4>
-                <div className="text-2xl font-heading font-bold text-[#F8F8F8] mt-1">
+                <div className="text-2xl font-heading font-bold text-heading mt-1">
                   <CountUp end={liveData.calls} />
                 </div>
               </div>
@@ -337,7 +337,7 @@ export default function SEOCommandCenter() {
           {/* Lower Section 1: Map Rankings List (6 cols) */}
           <div className="lg:col-span-6 glass-panel rounded-2xl border border-border-color p-6 md:p-8">
             <div className="flex justify-between items-center border-b border-border-color pb-4 mb-4">
-              <h3 className="text-base font-heading font-bold text-[#F8F8F8]">Live Keyword Map Rankings</h3>
+              <h3 className="text-base font-heading font-bold text-heading">Live Keyword Map Rankings</h3>
               <span className="text-[10px] text-light-bronze font-semibold uppercase tracking-wider flex items-center gap-1">
                 <MapPin className="w-3.5 h-3.5" /> Google Maps
               </span>
@@ -372,7 +372,7 @@ export default function SEOCommandCenter() {
           {/* Lower Section 2: Traffic Channels (6 cols) */}
           <div className="lg:col-span-6 glass-panel rounded-2xl border border-border-color p-6 md:p-8">
             <div className="flex justify-between items-center border-b border-border-color pb-4 mb-4">
-              <h3 className="text-base font-heading font-bold text-[#F8F8F8]">Traffic Acquisition Channels</h3>
+              <h3 className="text-base font-heading font-bold text-heading">Traffic Acquisition Channels</h3>
               <span className="text-[10px] text-light-bronze font-semibold uppercase tracking-wider flex items-center gap-1">
                 <BarChart3 className="w-3.5 h-3.5" /> Channels
               </span>

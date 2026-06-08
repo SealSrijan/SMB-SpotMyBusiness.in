@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,8 +42,8 @@ export default function Navbar() {
       <motion.header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           isScrolled
-            ? "bg-primary-bg/80 backdrop-blur-md border-b border-border-color/50 py-3"
-            : "bg-transparent py-5"
+            ? "bg-primary-bg/80 backdrop-blur-xl border-b border-border-color/50 py-3"
+            : "bg-primary-bg/40 backdrop-blur-md py-5"
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -69,7 +70,7 @@ export default function Navbar() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-heading font-bold tracking-[0.15em] text-[#F8F8F8] text-[16px] md:text-[17px] leading-none">
+                <span className="font-heading font-bold tracking-[0.15em] text-heading text-[16px] md:text-[17px] leading-none">
                   SPOT MY BUSINESS
                 </span>
                 <span className="text-[8px] tracking-[0.35em] text-light-bronze uppercase font-medium mt-1">
@@ -80,7 +81,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-8">
             <a
               href="#about"
               onClick={(e) => handleNavClick(e, "about")}
@@ -102,32 +103,42 @@ export default function Navbar() {
             >
               Command Center
             </a>
+
+            {/* Theme Switcher */}
+            <ThemeSwitcher />
+
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "contact")}
-              className="relative overflow-hidden group px-6 py-2.5 rounded-full border border-bronze/50 text-xs tracking-[0.15em] uppercase font-semibold text-[#F8F8F8] hover:border-light-bronze/80 transition-all duration-300 shadow-md"
+              className="relative overflow-hidden group px-6 py-2.5 rounded-full border border-bronze/50 text-xs tracking-[0.15em] uppercase font-semibold text-heading hover:border-light-bronze/80 transition-all duration-300 shadow-md"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-bronze to-light-bronze opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
               Get Started
             </a>
           </nav>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-text hover:text-[#F8F8F8] focus:outline-none z-50 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          {/* Mobile: Theme Switcher + Menu button */}
+          <div className="md:hidden flex items-center gap-3 z-50">
+            <ThemeSwitcher />
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-gray-text hover:text-heading focus:outline-none transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
+
+        {/* Premium Bronze Gradient Divider */}
+        <div className="navbar-divider" />
       </motion.header>
 
       {/* Mobile Drawer Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-30 bg-[#0B0B0B]/98 backdrop-blur-xl flex flex-col justify-center items-center gap-8 px-6"
+            className="fixed inset-0 z-30 bg-primary-bg/98 backdrop-blur-xl flex flex-col justify-center items-center gap-8 px-6"
             initial={{ opacity: 0, y: "-100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
@@ -137,28 +148,28 @@ export default function Navbar() {
             <a
               href="#about"
               onClick={(e) => handleNavClick(e, "about")}
-              className="text-lg tracking-[0.2em] uppercase font-semibold text-gray-text hover:text-[#F8F8F8] transition-colors"
+              className="text-lg tracking-[0.2em] uppercase font-semibold text-gray-text hover:text-heading transition-colors"
             >
               About Us
             </a>
             <a
               href="#services"
               onClick={(e) => handleNavClick(e, "services")}
-              className="text-lg tracking-[0.2em] uppercase font-semibold text-gray-text hover:text-[#F8F8F8] transition-colors"
+              className="text-lg tracking-[0.2em] uppercase font-semibold text-gray-text hover:text-heading transition-colors"
             >
               Services
             </a>
             <a
               href="#command-center"
               onClick={(e) => handleNavClick(e, "command-center")}
-              className="text-lg tracking-[0.2em] uppercase font-semibold text-gray-text hover:text-[#F8F8F8] transition-colors"
+              className="text-lg tracking-[0.2em] uppercase font-semibold text-gray-text hover:text-heading transition-colors"
             >
               Command Center
             </a>
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "contact")}
-              className="px-8 py-3 rounded-full border border-bronze text-sm tracking-[0.15em] uppercase font-semibold text-[#F8F8F8] hover:bg-bronze hover:text-white transition-all duration-300"
+              className="px-8 py-3 rounded-full border border-bronze text-sm tracking-[0.15em] uppercase font-semibold text-heading hover:bg-bronze hover:text-white transition-all duration-300"
             >
               Get Started
             </a>

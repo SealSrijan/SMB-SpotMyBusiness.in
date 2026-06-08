@@ -61,7 +61,7 @@ export default function Comparison() {
           <span className="text-xs uppercase tracking-[0.3em] text-light-bronze font-semibold">
             THE DIFFERENCE
           </span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-[#F8F8F8]">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-heading">
             SMB VS TYPICAL AGENCY
           </h2>
           <p className="text-gray-text text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
@@ -93,10 +93,10 @@ export default function Comparison() {
               >
                 {/* Feature Name & Tooltip */}
                 <div className="col-span-5 flex items-center gap-2 pr-4">
-                  <span className="text-xs md:text-sm font-heading font-semibold text-[#F8F8F8]">{row.feature}</span>
+                  <span className="text-xs md:text-sm font-heading font-semibold text-heading">{row.feature}</span>
                   <div className="group relative cursor-pointer">
                     <HelpCircle className="w-3.5 h-3.5 text-gray-text/40 hover:text-light-bronze transition-colors" />
-                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded bg-[#141414] border border-border-color text-[10px] text-gray-text leading-relaxed opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 z-30 text-center shadow-lg">
+                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded bg-secondary-bg border border-border-color text-[10px] text-gray-text leading-relaxed opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 z-30 text-center shadow-lg">
                       {row.tooltip}
                     </span>
                   </div>

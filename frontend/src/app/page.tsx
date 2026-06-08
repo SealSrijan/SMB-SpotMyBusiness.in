@@ -2,7 +2,6 @@
 
 import { useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
 
 import LoadingScreen from "@/components/LoadingScreen";
@@ -19,18 +18,7 @@ import Comparison from "@/components/Comparison";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import LenisScroll from "@/components/LenisScroll";
-
-// Dynamically import the 3D Canvas component to bypass Next.js SSR WebGL compilation errors
-const Hero3D = dynamic(() => import("@/components/Hero3D"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-[500px] md:h-[650px] flex items-center justify-center bg-[#141414]/30 rounded-2xl border border-border-color/30 glass-panel">
-      <div className="text-xs tracking-[0.25em] text-light-bronze/70 uppercase animate-pulse">
-        Initializing 3D Ecosystem...
-      </div>
-    </div>
-  ),
-});
+import PhoneMockup from "@/components/PhoneMockup";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -98,8 +86,8 @@ export default function Home() {
                     <span className="text-xs uppercase tracking-[0.35em] text-light-bronze font-bold inline-block px-3 py-1.5 rounded-full border border-bronze/20 bg-bronze/5">
                       Elite SEO Architects
                     </span>
-                    <h1 className="text-4xl sm:text-5xl md:text-[54px] font-heading font-extrabold tracking-tight text-[#F8F8F8] leading-[1.08] uppercase">
-                      We Don't Just Improve Rankings.
+                    <h1 className="text-4xl sm:text-5xl md:text-[54px] font-heading font-extrabold tracking-tight text-heading leading-[1.08] uppercase">
+                      We Don&#39;t Just Improve Rankings.
                       <span className="block text-transparent bg-clip-text bg-gradient-to-r from-bronze via-light-bronze to-champagne mt-2 drop-shadow-sm">
                         We Build Digital Dominance.
                       </span>
@@ -123,21 +111,21 @@ export default function Home() {
                   >
                     <button
                       onClick={() => handleScrollTo("contact")}
-                      className="px-8 py-4 rounded-full bg-gradient-to-r from-bronze to-light-bronze text-xs tracking-[0.25em] uppercase font-bold text-[#F8F8F8] hover:shadow-lg hover:shadow-bronze/20 transition-all duration-300 flex items-center gap-2"
+                      className="px-8 py-4 rounded-full bg-gradient-to-r from-bronze to-light-bronze text-xs tracking-[0.25em] uppercase font-bold text-white hover:shadow-lg hover:shadow-bronze/20 transition-all duration-300 flex items-center gap-2"
                     >
                       Get Started
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                     <button
                       onClick={() => handleScrollTo("services")}
-                      className="px-8 py-4 rounded-full border border-border-color bg-secondary-bg hover:border-bronze/50 text-xs tracking-[0.25em] uppercase font-bold text-gray-text hover:text-white transition-all duration-300"
+                      className="px-8 py-4 rounded-full border border-border-color bg-secondary-bg hover:border-bronze/50 text-xs tracking-[0.25em] uppercase font-bold text-gray-text hover:text-heading transition-all duration-300"
                     >
                       View Services
                     </button>
                   </motion.div>
                 </div>
 
-                {/* Right Side 3D Interaction */}
+                {/* Right Side — Premium Phone Mockup */}
                 <div className="lg:col-span-6 w-full flex justify-center">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -145,7 +133,7 @@ export default function Home() {
                     transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     className="w-full max-w-lg md:max-w-xl"
                   >
-                    <Hero3D />
+                    <PhoneMockup />
                   </motion.div>
                 </div>
               </div>

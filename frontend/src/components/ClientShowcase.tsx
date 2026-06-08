@@ -86,7 +86,7 @@ export default function ClientShowcase() {
               <Activity className="w-3.5 h-3.5 text-bronze" />
               CASE STUDIES
             </span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-[#F8F8F8]">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-heading">
               CLIENT SHOWCASE
             </h2>
           </div>
@@ -128,7 +128,7 @@ export default function ClientShowcase() {
                     </a>
                   </div>
 
-                  <h3 className="text-2xl font-heading font-bold text-[#F8F8F8] mt-6">
+                  <h3 className="text-2xl font-heading font-bold text-heading mt-6">
                     {client.name}
                   </h3>
                   <p className="text-gray-text text-xs md:text-sm mt-2 leading-relaxed">
@@ -148,7 +148,7 @@ export default function ClientShowcase() {
                   </div>
                   <div>
                     <span className="text-[9px] uppercase tracking-wider text-gray-text/50">Reputation</span>
-                    <p className="text-sm font-semibold text-[#F8F8F8] mt-0.5">{client.reviews}</p>
+                    <p className="text-sm font-semibold text-heading mt-0.5">{client.reviews}</p>
                   </div>
                   <div>
                     <span className="text-[9px] uppercase tracking-wider text-gray-text/50">Search Position</span>

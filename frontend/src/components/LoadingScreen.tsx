@@ -35,7 +35,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
     <AnimatePresence>
       {!isDone && (
         <motion.div
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0B0B0B]"
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-primary-bg"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
@@ -100,7 +100,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.0, duration: 0.6 }}
             >
-              <h2 className="text-2xl font-heading font-bold tracking-[0.25em] text-[#F8F8F8] uppercase">
+              <h2 className="text-2xl font-heading font-bold tracking-[0.25em] text-heading uppercase">
                 Spot My Business
               </h2>
               <span className="text-xs text-light-bronze tracking-[0.35em] uppercase mt-2 font-medium">

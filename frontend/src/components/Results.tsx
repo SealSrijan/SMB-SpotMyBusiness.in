@@ -48,7 +48,7 @@ function AnimatedStat({ label, endValue, prefix = "", suffix = "", decimals = 0,
         {label}
       </span>
       
-      <div className="text-5xl md:text-6xl font-heading font-extrabold text-[#F8F8F8] my-6 tracking-tight flex items-center justify-center">
+      <div className="text-5xl md:text-6xl font-heading font-extrabold text-heading my-6 tracking-tight flex items-center justify-center">
         {prefix}
         <span>{count.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}</span>
         {suffix}
@@ -100,7 +100,7 @@ export default function Results() {
           <span className="text-xs uppercase tracking-[0.3em] text-light-bronze font-semibold">
             THE PERFORMANCE
           </span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-[#F8F8F8]">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-heading">
             MEASURABLE DOMINANCE
           </h2>
           <p className="text-gray-text text-base md:text-lg max-w-2xl mx-auto leading-relaxed">

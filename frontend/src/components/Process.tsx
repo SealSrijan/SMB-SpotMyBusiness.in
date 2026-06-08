@@ -85,7 +85,7 @@ export default function Process() {
           <span className="text-xs uppercase tracking-[0.3em] text-light-bronze font-semibold">
             THE ENGINE
           </span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-[#F8F8F8]">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-heading">
             OUR DOMINANCE PROCESS
           </h2>
           <p className="text-gray-text text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
@@ -140,7 +140,7 @@ export default function Process() {
                         {step.num}
                       </span>
 
-                      <h3 className="text-xl font-heading font-bold text-[#F8F8F8]">
+                      <h3 className="text-xl font-heading font-bold text-heading">
                         {step.title}
                       </h3>
                       

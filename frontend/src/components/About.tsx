@@ -41,7 +41,7 @@ export default function About() {
               <span className="text-xs uppercase tracking-[0.3em] text-light-bronze font-semibold">
                 WHO WE ARE
               </span>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-[#F8F8F8] mt-3 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-heading mt-3 leading-tight">
                 WE DO NOT JUST IMPROVE SCORES.<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-bronze via-light-bronze to-champagne">
                   WE SECURE DOMINANCE.
@@ -84,7 +84,7 @@ export default function About() {
                     {card.icon}
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-heading font-bold text-[#F8F8F8]">
+                    <h3 className="text-xl font-heading font-bold text-heading">
                       {card.title}
                     </h3>
                     <p className="text-gray-text text-sm leading-relaxed">

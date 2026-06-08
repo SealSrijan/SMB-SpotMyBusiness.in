@@ -81,7 +81,7 @@ export default function Contact() {
               <span className="text-xs uppercase tracking-[0.3em] text-light-bronze font-semibold">
                 GET STARTED
               </span>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-[#F8F8F8] leading-tight">
+              <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-heading leading-tight">
                 LET'S SECURE YOUR DOMINANCE
               </h2>
               <p className="text-gray-text text-base leading-relaxed">
@@ -96,7 +96,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-gray-text/50">Email Support</span>
-                  <p className="text-sm font-semibold text-[#F8F8F8] mt-0.5">grow@spotmybusiness.com</p>
+                  <p className="text-sm font-semibold text-heading mt-0.5">grow@spotmybusiness.com</p>
                 </div>
               </div>
 
@@ -106,7 +106,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-gray-text/50">Direct Hotline</span>
-                  <p className="text-sm font-semibold text-[#F8F8F8] mt-0.5">+1 (800) 555-RANK</p>
+                  <p className="text-sm font-semibold text-heading mt-0.5">+1 (800) 555-RANK</p>
                 </div>
               </div>
 
@@ -116,7 +116,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-gray-text/50">Global HQ</span>
-                  <p className="text-sm font-semibold text-[#F8F8F8] mt-0.5">500 Terry Francine St., San Francisco, CA</p>
+                  <p className="text-sm font-semibold text-heading mt-0.5">500 Terry Francine St., San Francisco, CA</p>
                 </div>
               </div>
             </div>
@@ -150,7 +150,7 @@ export default function Contact() {
                           id="name"
                           {...register("name")}
                           placeholder=" "
-                          className="block py-3 px-0 w-full text-sm text-[#F8F8F8] bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer"
+                          className="block py-3 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer"
                         />
                         <label
                           htmlFor="name"
@@ -168,7 +168,7 @@ export default function Contact() {
                           id="businessName"
                           {...register("businessName")}
                           placeholder=" "
-                          className="block py-3 px-0 w-full text-sm text-[#F8F8F8] bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer"
+                          className="block py-3 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer"
                         />
                         <label
                           htmlFor="businessName"
@@ -188,7 +188,7 @@ export default function Contact() {
                           id="phone"
                           {...register("phone")}
                           placeholder=" "
-                          className="block py-3 px-0 w-full text-sm text-[#F8F8F8] bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer"
+                          className="block py-3 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer"
                         />
                         <label
                           htmlFor="phone"
@@ -206,7 +206,7 @@ export default function Contact() {
                           id="email"
                           {...register("email")}
                           placeholder=" "
-                          className="block py-3 px-0 w-full text-sm text-[#F8F8F8] bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer"
+                          className="block py-3 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer"
                         />
                         <label
                           htmlFor="email"
@@ -225,7 +225,7 @@ export default function Contact() {
                         id="website"
                         {...register("website")}
                         placeholder=" "
-                        className="block py-3 px-0 w-full text-sm text-[#F8F8F8] bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer"
+                        className="block py-3 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer"
                       />
                       <label
                         htmlFor="website"
@@ -243,7 +243,7 @@ export default function Contact() {
                         {...register("message")}
                         placeholder=" "
                         rows={3}
-                        className="block py-3 px-0 w-full text-sm text-[#F8F8F8] bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer resize-none"
+                        className="block py-3 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-border-color appearance-none focus:outline-none focus:ring-0 focus:border-light-bronze peer resize-none"
                       />
                       <label
                         htmlFor="message"
@@ -256,7 +256,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-bronze to-light-bronze font-heading text-xs tracking-[0.25em] uppercase font-bold text-[#F8F8F8] hover:shadow-lg hover:shadow-bronze/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                      className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-bronze to-light-bronze font-heading text-xs tracking-[0.25em] uppercase font-bold text-heading hover:shadow-lg hover:shadow-bronze/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                     >
                       {isSubmitting ? (
                         <>
@@ -277,7 +277,7 @@ export default function Contact() {
                     transition={{ duration: 0.5 }}
                   >
                     <CheckCircle2 className="w-16 h-16 text-light-bronze mb-6 animate-pulse" />
-                    <h3 className="text-2xl font-heading font-bold text-[#F8F8F8]">
+                    <h3 className="text-2xl font-heading font-bold text-heading">
                       STRATEGY COMMENCED
                     </h3>
                     <p className="text-gray-text text-sm max-w-sm mt-3 leading-relaxed">

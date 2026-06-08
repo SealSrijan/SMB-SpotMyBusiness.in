@@ -163,7 +163,7 @@ function TiltCard({ service, onClick }: { service: ServiceItem; onClick: () => v
           <ArrowUpRight className="w-5 h-5 text-gray-text/40 group-hover:text-light-bronze transition-colors duration-300" />
         </div>
 
-        <h3 className="text-xl font-heading font-bold text-[#F8F8F8] mt-6 group-hover:text-white transition-colors duration-300">
+        <h3 className="text-xl font-heading font-bold text-heading mt-6 group-hover:text-white transition-colors duration-300">
           {service.title}
         </h3>
         <p className="text-gray-text text-sm mt-3 leading-relaxed">
@@ -191,7 +191,7 @@ export default function Services() {
           <span className="text-xs uppercase tracking-[0.3em] text-light-bronze font-semibold">
             OUR SPECIALIZATIONS
           </span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-[#F8F8F8]">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-heading">
             INDUSTRIES WE DOMINATE
           </h2>
           <p className="text-gray-text text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
@@ -221,7 +221,7 @@ export default function Services() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedService(null)}
-              className="absolute inset-0 bg-[#0B0B0B]/85 backdrop-blur-md"
+              className="absolute inset-0 bg-primary-bg/85 backdrop-blur-md"
             />
 
             {/* Modal Box */}
@@ -248,7 +248,7 @@ export default function Services() {
                   {React.createElement(selectedService.icon, { className: "w-8 h-8" })}
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-heading font-bold text-[#F8F8F8]">
+                  <h3 className="text-2xl md:text-3xl font-heading font-bold text-heading">
                     {selectedService.title}
                   </h3>
                   <span className="text-[10px] tracking-[0.25em] text-light-bronze uppercase font-bold mt-1 block">
@@ -259,7 +259,7 @@ export default function Services() {
 
               <div className="mt-8 space-y-6">
                 <div>
-                  <h4 className="text-xs uppercase tracking-[0.2em] text-[#F8F8F8] font-bold">
+                  <h4 className="text-xs uppercase tracking-[0.2em] text-heading font-bold">
                     Overview
                   </h4>
                   <p className="text-gray-text text-sm mt-2.5 leading-relaxed">
@@ -268,7 +268,7 @@ export default function Services() {
                 </div>
 
                 <div>
-                  <h4 className="text-xs uppercase tracking-[0.2em] text-[#F8F8F8] font-bold">
+                  <h4 className="text-xs uppercase tracking-[0.2em] text-heading font-bold">
                     Key Features in Our Strategy
                   </h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
@@ -289,7 +289,7 @@ export default function Services() {
                 <a
                   href="#contact"
                   onClick={() => setSelectedService(null)}
-                  className="w-full sm:w-auto px-6 py-3 text-center rounded-full bg-gradient-to-r from-bronze to-light-bronze text-xs tracking-[0.2em] uppercase font-bold text-[#F8F8F8] hover:shadow-lg hover:shadow-bronze/20 transition-all duration-300"
+                  className="w-full sm:w-auto px-6 py-3 text-center rounded-full bg-gradient-to-r from-bronze to-light-bronze text-xs tracking-[0.2em] uppercase font-bold text-heading hover:shadow-lg hover:shadow-bronze/20 transition-all duration-300"
                 >
                   Apply Strategy Now
                 </a>

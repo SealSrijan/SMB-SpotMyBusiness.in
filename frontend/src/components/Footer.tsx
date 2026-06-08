@@ -31,7 +31,7 @@ export default function Footer() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-heading font-bold tracking-[0.15em] text-[#F8F8F8] text-[16px] leading-none">
+                <span className="font-heading font-bold tracking-[0.15em] text-heading text-[16px] leading-none">
                   SPOT MY BUSINESS
                 </span>
                 <span className="text-[8px] tracking-[0.3em] text-light-bronze uppercase font-medium mt-1">
@@ -81,7 +81,7 @@ export default function Footer() {
 
           {/* Quick Links (3 cols) */}
           <div className="md:col-span-3 space-y-4">
-            <h4 className="text-xs uppercase tracking-[0.2em] text-[#F8F8F8] font-bold">
+            <h4 className="text-xs uppercase tracking-[0.2em] text-heading font-bold">
               Quick Links
             </h4>
             <ul className="space-y-2.5 text-xs text-gray-text font-medium">
@@ -102,7 +102,7 @@ export default function Footer() {
 
           {/* Contact Details (4 cols) */}
           <div className="md:col-span-4 space-y-4">
-            <h4 className="text-xs uppercase tracking-[0.2em] text-[#F8F8F8] font-bold">
+            <h4 className="text-xs uppercase tracking-[0.2em] text-heading font-bold">
               Contact Info
             </h4>
             <div className="space-y-2 text-xs text-gray-text leading-relaxed font-medium">

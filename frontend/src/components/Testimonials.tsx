@@ -55,7 +55,7 @@ export default function Testimonials() {
           <span className="text-xs uppercase tracking-[0.3em] text-light-bronze font-semibold">
             PARTNER FEEDBACK
           </span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-[#F8F8F8]">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-heading">
             WHAT OUR CLIENTS SAY
           </h2>
         </div>
@@ -84,7 +84,7 @@ export default function Testimonials() {
                     {t.avatarLetter}
                   </div>
                   <div>
-                    <h4 className="text-xs font-heading font-bold text-[#F8F8F8]">{t.name}</h4>
+                    <h4 className="text-xs font-heading font-bold text-heading">{t.name}</h4>
                     <span className="text-[10px] text-gray-text/60 mt-0.5 block">{t.role}, {t.company}</span>
                   </div>
                 </div>
