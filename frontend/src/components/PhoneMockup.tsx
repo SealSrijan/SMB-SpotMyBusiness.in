@@ -98,6 +98,7 @@ export default function PhoneMockup() {
 
             {/* Status Bar */}
             <div className="absolute top-[10px] left-0 right-0 flex justify-between items-center px-6 z-10">
+            <div  className="flex gap-[2px]"  style={{ transform: "scaleX(-1)" }}></div>
               <span className="text-[9px] text-white/70 font-semibold">
                 {indiaTime || "9:41"}
               </span>
