@@ -1,0 +1,10 @@
+{
+  "name": "spot-my-business",
+  "version": "1.0.0",
+  "description": "Spot My Business - Global SEO Partner",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm run start"
+  }
+}
