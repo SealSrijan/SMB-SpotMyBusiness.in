@@ -163,7 +163,7 @@ export default function ClientShowcase() {
         <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-primary-bg to-transparent pointer-events-none z-10" />
 
         {/* Scrolling row — left to right */}
-        <div className="flex w-max animate-marquee-reverse hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
           <div className="flex gap-8 px-4">
             {items.map((client, idx) => (
               <ClientCard key={`${client.id}-${idx}`} client={client} />
