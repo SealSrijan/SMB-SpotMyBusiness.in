@@ -9,7 +9,6 @@ function useIndianTime() {
   useEffect(() => {
     const update = () => {
       const now = new Date();
-      // Convert to IST (UTC+5:30)
       const istOffset = 5.5 * 60 * 60 * 1000;
       const utc = now.getTime() + now.getTimezoneOffset() * 60000;
       const ist = new Date(utc + istOffset);
@@ -20,11 +19,55 @@ function useIndianTime() {
     };
 
     update();
-    const interval = setInterval(update, 10000); // update every 10s
+    const interval = setInterval(update, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return time;
+}
+
+/* ─── SVG Status Bar Icons ─── */
+
+function CellularIcon() {
+  // 4 ascending bars, left-to-right (small → large), last bar dim = not full signal
+  return (
+    <svg width="14" height="11" viewBox="0 0 17 11" fill="none">
+      <rect x="0" y="8" width="3" height="3" rx="0.5" fill="white" />
+      <rect x="4.5" y="5" width="3" height="6" rx="0.5" fill="white" />
+      <rect x="9" y="2" width="3" height="9" rx="0.5" fill="white" />
+      <rect x="13.5" y="0" width="3" height="11" rx="0.5" fill="white" opacity="0.35" />
+    </svg>
+  );
+}
+
+function WifiIcon() {
+  return (
+    <svg width="13" height="10" viewBox="0 0 16 12" fill="white">
+      <path d="M8 11.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z" />
+      <path d="M4.93 7.82a4.38 4.38 0 0 1 6.14 0" stroke="white" strokeWidth="1.4" strokeLinecap="round" fill="none" />
+      <path d="M2.1 5a8.28 8.28 0 0 1 11.8 0" stroke="white" strokeWidth="1.4" strokeLinecap="round" fill="none" />
+    </svg>
+  );
+}
+
+function BatteryIcon() {
+  return (
+    <div className="flex items-center gap-[2px]">
+      <div className="relative w-[20px] h-[9px] border border-white/80 rounded-[2.5px]">
+        {/* Fill at ~76% */}
+        <div
+          className="absolute top-[1px] left-[1px] bottom-[1px] rounded-[1.5px] bg-white"
+          style={{ width: "74%" }}
+        />
+        {/* Percentage text inside */}
+        <span className="absolute inset-0 flex items-center justify-center text-[5.5px] font-bold text-black/70 leading-none">
+          76
+        </span>
+      </div>
+      {/* Battery nub */}
+      <div className="w-[1.5px] h-[4px] bg-white/80 rounded-r-[1px]" />
+    </div>
+  );
 }
 
 export default function PhoneMockup() {
@@ -49,12 +92,15 @@ export default function PhoneMockup() {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full flex flex-col items-center justify-center py-4">
+    <div
+      ref={containerRef}
+      className="relative w-full flex flex-col items-center justify-center py-4"
+    >
       {/* Ambient glow behind phone */}
       <div className="absolute w-72 h-72 rounded-full bg-bronze/15 blur-[80px] pointer-events-none" />
       <div className="absolute w-48 h-48 rounded-full bg-light-bronze/10 blur-[60px] pointer-events-none translate-y-20" />
 
-      {/* Floating SEO Particles — MORE PROMINENT */}
+      {/* Floating SEO Particles — PROMINENT */}
       <FloatingParticles />
 
       {/* Floating Phone */}
@@ -96,44 +142,41 @@ export default function PhoneMockup() {
             {/* Dynamic Island */}
             <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[90px] h-[26px] bg-black rounded-[13px] z-20" />
 
-            {/* Status Bar */}
-            <div className="absolute top-[10px] left-0 right-0 flex justify-between items-center px-6 z-10">
-            <div  className="flex gap-[2px]"  style={{ transform: "scaleX(-1)" }}></div>
-              <span className="text-[9px] text-white/70 font-semibold">
-                {indiaTime || "9:41"}
+            {/* ─── Status Bar (matching reference) ─── */}
+            <div className="absolute top-[11px] left-0 right-0 flex justify-between items-center px-[22px] z-10">
+              {/* Left: Time */}
+              <span className="text-[10px] text-white font-semibold leading-none tracking-tight">
+                {indiaTime || "5:13"}
               </span>
-              <div className="flex items-center gap-1">
-                <div className="flex gap-[2px]">
-                  <div className="w-[3px] h-[5px] bg-white/70 rounded-[1px]" />
-                  <div className="w-[3px] h-[7px] bg-white/70 rounded-[1px]" />
-                  <div className="w-[3px] h-[9px] bg-white/70 rounded-[1px]" />
-                  <div className="w-[3px] h-[11px] bg-white/40 rounded-[1px]" />
-                </div>
-                <div className="w-[18px] h-[9px] border border-white/70 rounded-[2px] ml-1 relative">
-                  <div className="absolute inset-[1.5px] right-[3px] bg-white/70 rounded-[1px]" />
-                </div>
+
+              {/* Right: Cellular + WiFi + Battery */}
+              <div className="flex items-center gap-[5px]">
+                <CellularIcon />
+                <WifiIcon />
+                <BatteryIcon />
               </div>
             </div>
 
-            {/* Screen Content — Google Search Results */}
+            {/* ─── Screen Content — Google Search Results ─── */}
             <div className="absolute inset-[3px] rounded-[41px] overflow-hidden bg-[#1F1F1F]">
-              <div className="flex flex-col h-full pt-11">
+              <div className="flex flex-col h-full pt-[38px]">
                 {/* Google Header */}
-                <div className="flex items-center justify-between px-4 pt-2 pb-2">
+                <div className="flex items-center justify-between px-4 pb-2">
                   <motion.span
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8 }}
                     className="text-[14px] font-medium tracking-tight"
                     style={{
-                      background: "linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853)",
+                      background:
+                        "linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                     }}
                   >
                     Google
                   </motion.span>
-                  <div className="w-[22px] h-[22px] rounded-full bg-gradient-to-br from-amber-600 to-amber-800 flex items-center justify-center">
+                  <div className="w-[22px] h-[22px] rounded-full bg-gradient-to-br from-amber-600 to-amber-800 flex items-center justify-center overflow-hidden border border-amber-700/50">
                     <span className="text-[9px] text-white font-bold">S</span>
                   </div>
                 </div>
@@ -145,7 +188,15 @@ export default function PhoneMockup() {
                   transition={{ delay: 1.0 }}
                   className="mx-3 mb-2 px-3 py-[6px] bg-[#303134] rounded-full flex items-center gap-2"
                 >
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#9AA0A6" strokeWidth="3" strokeLinecap="round">
+                  <svg
+                    width="10"
+                    height="10"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#9AA0A6"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  >
                     <circle cx="11" cy="11" r="8" />
                     <line x1="21" y1="21" x2="16.65" y2="16.65" />
                   </svg>
@@ -153,11 +204,27 @@ export default function PhoneMockup() {
                     best coaching centre in j...
                   </span>
                   <div className="flex items-center gap-2">
-                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#4285F4" strokeWidth="3" strokeLinecap="round">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#4285F4"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                    >
                       <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
                       <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
                     </svg>
-                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#4285F4" strokeWidth="3" strokeLinecap="round">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#4285F4"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                    >
                       <rect x="3" y="3" width="18" height="18" rx="2" />
                       <circle cx="12" cy="12" r="3" />
                     </svg>
@@ -171,16 +238,24 @@ export default function PhoneMockup() {
                   transition={{ delay: 1.2 }}
                   className="flex gap-3 px-3 pb-2 border-b border-[#3C4043] text-[8px] overflow-hidden"
                 >
-                  <span className="text-[#9AA0A6] whitespace-nowrap">AI Mode</span>
+                  <span className="text-[#9AA0A6] whitespace-nowrap">
+                    AI Mode
+                  </span>
                   <span className="text-[#9AA0A6] whitespace-nowrap">All</span>
                   <span className="text-[#9AA0A6] whitespace-nowrap">Maps</span>
-                  <span className="text-[#9AA0A6] whitespace-nowrap">Forums</span>
-                  <span className="text-[#8AB4F8] whitespace-nowrap font-semibold border-b border-[#8AB4F8] pb-1.5">Places</span>
-                  <span className="text-[#9AA0A6] whitespace-nowrap">Short vi...</span>
+                  <span className="text-[#9AA0A6] whitespace-nowrap">
+                    Forums
+                  </span>
+                  <span className="text-[#8AB4F8] whitespace-nowrap font-semibold border-b border-[#8AB4F8] pb-1.5">
+                    Places
+                  </span>
+                  <span className="text-[#9AA0A6] whitespace-nowrap">
+                    Short vi...
+                  </span>
                 </motion.div>
 
                 {/* Search Results — Scrollable */}
-                <div className="flex-1 overflow-y-auto px-3 pt-2 space-y-2">
+                <div className="flex-1 overflow-y-auto px-3 pt-2 space-y-1">
                   {/* Result 1 — Science Squad (highlighted #1) */}
                   <motion.div
                     initial={{ opacity: 0, y: 12 }}
@@ -188,32 +263,44 @@ export default function PhoneMockup() {
                     transition={{ delay: 1.4, duration: 0.5 }}
                     className="relative p-2 rounded-xl"
                     style={{
-                      background: "linear-gradient(135deg, rgba(139,94,60,0.12) 0%, rgba(212,163,115,0.06) 100%)",
+                      background:
+                        "linear-gradient(135deg, rgba(139,94,60,0.12) 0%, rgba(212,163,115,0.06) 100%)",
                       border: "1px solid rgba(139,94,60,0.2)",
                     }}
                   >
                     {/* #1 Badge */}
                     <div className="absolute -top-1 -right-1 w-[18px] h-[18px] rounded-full bg-gradient-to-br from-bronze to-light-bronze flex items-center justify-center shadow-md">
-                      <span className="text-[7px] text-white font-bold">#1</span>
+                      <span className="text-[7px] text-white font-bold">
+                        #1
+                      </span>
                     </div>
 
-                    <h4 className="text-[10px] font-semibold text-[#E8EAED] leading-tight">
+                    <h4 className="text-[10px] font-semibold text-[#E8EAED] leading-tight pr-4">
                       Science Squad | Best Coaching Centre...
                     </h4>
                     <div className="flex items-center gap-1 mt-0.5">
-                      <span className="text-[8px] text-[#E8EAED] font-medium">4.9</span>
+                      <span className="text-[8px] text-[#E8EAED] font-medium">
+                        4.9
+                      </span>
                       <span className="text-[8px] text-amber-400">★</span>
                       <span className="text-[7px] text-[#9AA0A6]">(158)</span>
-                      <span className="text-[7px] text-[#9AA0A6]">· Coaching Center</span>
+                      <span className="text-[7px] text-[#9AA0A6]">
+                        · Coaching Center
+                      </span>
                     </div>
                     <p className="text-[7px] text-[#34A853] mt-0.5">
-                      Open · Closes 5 pm · 2F, 29/A, Raja SC...
+                      Open · Closes 5 pm · 2F, 29/A, Raja SC Mullick Rd · 3.6
+                      k...
                     </p>
-                    <p className="text-[7px] text-[#9AA0A6]">3+ years in business</p>
-                    <p className="text-[7px] text-[#9AA0A6]">On-site services · Online classes</p>
+                    <p className="text-[7px] text-[#9AA0A6]">
+                      3+ years in business
+                    </p>
+                    <p className="text-[7px] text-[#9AA0A6]">
+                      On-site services · Online classes
+                    </p>
 
                     {/* Action Buttons */}
-                    <div className="flex gap-1.5 mt-1.5">
+                    <div className="flex gap-1 mt-1.5 flex-wrap">
                       <ActionBtn icon="📞" label="Call" />
                       <ActionBtn icon="🧭" label="Directions" />
                       <ActionBtn icon="🌐" label="Website" />
@@ -238,16 +325,25 @@ export default function PhoneMockup() {
                       <span className="text-[8px] text-[#E8EAED]">4.5</span>
                       <span className="text-[8px] text-amber-400">★</span>
                       <span className="text-[7px] text-[#9AA0A6]">(316)</span>
-                      <span className="text-[7px] text-[#9AA0A6]">· Banking entrance</span>
+                      <span className="text-[7px] text-[#9AA0A6]">
+                        · Banking entrance coaching centre
+                      </span>
                     </div>
                     <p className="text-[7px] text-[#34A853] mt-0.5">
-                      Open · Closes 7 pm · 2nd Floor, 16B...
+                      Open · Closes 7 pm · 2nd Floor, 16B, Central Rd,
+                      opposit...
                     </p>
-                    <p className="text-[7px] text-[#9AA0A6]">7+ years in business</p>
-                    <div className="flex gap-1.5 mt-1.5">
+                    <p className="text-[7px] text-[#9AA0A6]">
+                      7+ years in business
+                    </p>
+                    <p className="text-[7px] text-[#9AA0A6]">
+                      On-site services
+                    </p>
+                    <div className="flex gap-1 mt-1.5 flex-wrap">
                       <ActionBtn icon="📞" label="Call" />
                       <ActionBtn icon="🧭" label="Directions" />
                       <ActionBtn icon="🌐" label="Website" />
+                      <ActionBtn icon="💬" label="Wha..." />
                     </div>
                   </motion.div>
 
@@ -258,18 +354,32 @@ export default function PhoneMockup() {
                     transition={{ delay: 2.0, duration: 0.5 }}
                     className="p-2 border-t border-[#3C4043]"
                   >
-                    <h4 className="text-[10px] font-semibold text-[#E8EAED] leading-tight">
-                      Tutelage – Coaching Center by Dr. So...
-                    </h4>
+                    <div className="flex justify-between items-start">
+                      <h4 className="text-[10px] font-semibold text-[#E8EAED] leading-tight">
+                        Tutelage – Coaching Center by Dr. So...
+                      </h4>
+                      <span className="text-[8px] text-[#9AA0A6]">⋮</span>
+                    </div>
                     <div className="flex items-center gap-1 mt-0.5">
                       <span className="text-[8px] text-[#E8EAED]">5.0</span>
                       <span className="text-[8px] text-amber-400">★</span>
                       <span className="text-[7px] text-[#9AA0A6]">(12)</span>
-                      <span className="text-[7px] text-[#9AA0A6]">· Education center</span>
+                      <span className="text-[7px] text-[#9AA0A6]">
+                        · Education center
+                      </span>
                     </div>
                     <p className="text-[7px] text-[#34A853] mt-0.5">
-                      Open · Closes 10 pm · Flat No 4B...
+                      Open · Closes 10 pm · Flat No 4B, 10/94, near 10 No
+                      Pu...
                     </p>
+                    <p className="text-[7px] text-[#9AA0A6] italic leading-tight mt-0.5">
+                      &quot;Where Concepts Become Clear, Confidence Grows, and
+                      Results Speak!&quot;
+                    </p>
+                    <div className="flex gap-1 mt-1.5">
+                      <ActionBtn icon="🧭" label="Directions" />
+                      <ActionBtn icon="📤" label="Share" />
+                    </div>
                   </motion.div>
                 </div>
 
@@ -282,7 +392,7 @@ export default function PhoneMockup() {
                 >
                   <NavItem icon="🏠" label="Home" />
                   <NavItem icon="🔍" label="Search" active />
-                  <NavItem icon="🔔" label="Notifs" badge />
+                  <NavItem icon="🔔" label="Notifications" badge />
                   <NavItem icon="⚙️" label="Activity" />
                 </motion.div>
 
@@ -347,11 +457,11 @@ export default function PhoneMockup() {
   );
 }
 
-/* Small reusable components for the phone UI */
+/* ─── Small reusable components for the phone UI ─── */
 
 function ActionBtn({ icon, label }: { icon: string; label: string }) {
   return (
-    <div className="flex items-center gap-0.5 px-2 py-[3px] rounded-full border border-[#5F6368] bg-[#303134]">
+    <div className="flex items-center gap-0.5 px-[6px] py-[2.5px] rounded-full border border-[#5F6368] bg-[#303134]">
       <span className="text-[7px]">{icon}</span>
       <span className="text-[7px] text-[#E8EAED]">{label}</span>
     </div>
@@ -378,7 +488,7 @@ function NavItem({
         </div>
       )}
       <span
-        className={`text-[7px] ${
+        className={`text-[6px] ${
           active ? "text-[#8AB4F8] font-semibold" : "text-[#9AA0A6]"
         }`}
       >
