@@ -97,6 +97,32 @@ const servicesList: ServiceItem[] = [
     longDesc: "Whether you operate a locksmith service, dry cleaner, or specialty shop, our general Local Business SEO system establishes dominant organic authority in your zip codes to increase inbound calls.",
     features: ["Hyper-local Citation Auditing", "Localized Content Siloing", "Google Post & Update Campaigns", "Maps Ranking Audit & Tracking"],
   },
+  {
+  id: 11,
+  title: "Packers and Movers",
+  icon: Truck,
+  shortDesc: "Specialized local SEO solutions designed exclusively for packers and movers to generate more relocation leads.",
+  longDesc: "Our Packers and Movers SEO strategy helps relocation companies dominate Google Search and Google Maps in their service areas. From local keyword optimization and service-area targeting to reputation management and Google Business Profile optimization, we focus on increasing qualified leads, phone calls, and booking requests.",
+  features: [
+    "Service Area SEO Optimization",
+    "Google Business Profile Management",
+    "Moving & Relocation Keyword Targeting",
+    "Maps Ranking & Competitor Tracking"
+  ],
+  },
+  {
+  id: 12,
+  title: "Decorators & Caterers",
+  icon: UtensilsCrossed,
+  shortDesc: "Tailored local SEO solutions for decorators, event planners, and catering businesses to attract more event bookings.",
+  longDesc: "Our Decorators & Caterers SEO strategy helps event service providers rank higher on Google Search and Google Maps. We optimize your online presence with location-specific keywords, service pages, Google Business Profile enhancements, and reputation management to generate more wedding, corporate, and special event inquiries.",
+  features: [
+    "Event & Wedding Keyword Optimization",
+    "Google Business Profile Optimization",
+    "Location-Based Service Page SEO",
+    "Review & Maps Ranking Management"
+  ],
+},
 ];
 
 // Interactive 3D Tilt Card
