@@ -3,7 +3,6 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ExternalLink, Globe, Star, Users, ArrowRight, Activity } from "lucide-react";
-import scienceSquadImg from "@/images/sciencesquad_img.jpg";
 
 interface ClientData {
   id: string;
@@ -54,7 +53,7 @@ export default function ClientShowcase() {
             leads: "3x Leads Generated",
             reviews: "5.0 Star Rating (30+)",
             visibility: "#1 Google Maps Position",
-            initials: "sciencesquad_img",
+            initials: "SS",
             desc: "Science Squad Dankuni provides expert coaching for students seeking academic excellence in Dankuni."
           },
           {
