@@ -96,7 +96,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-gray-text/50">Email Support</span>
-                  <p className="text-sm font-semibold text-heading mt-0.5">grow@spotmybusiness.com</p>
+                  <p className="text-sm font-semibold text-heading mt-0.5">smb.spot.my.business@gmail.com</p>
                 </div>
               </div>
 
@@ -106,7 +106,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-gray-text/50">Direct Hotline</span>
-                  <p className="text-sm font-semibold text-heading mt-0.5">+1 (800) 555-RANK</p>
+                  <p className="text-sm font-semibold text-heading mt-0.5">+91-9007960333/ +91-8597913452</p>
                 </div>
               </div>
 
@@ -116,7 +116,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-gray-text/50">Global HQ</span>
-                  <p className="text-sm font-semibold text-heading mt-0.5">500 Terry Francine St., San Francisco, CA</p>
+                  <p className="text-sm font-semibold text-heading mt-0.5">Middle Rd, Sen Para, Santoshpur, Kolkata, West Bengal 700075</p>
                 </div>
               </div>
             </div>
