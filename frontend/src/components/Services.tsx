@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Utensils, Coffee, Stethoscope, Pill, GraduationCap, 
-  BookOpen, Scissors, Armchair, Laptop, Building2, X, ArrowUpRight 
+  BookOpen, Scissors, Armchair, Laptop, Building2, X, ArrowUpRight, Truck, UtensilsCrossed 
 } from "lucide-react";
 
 interface ServiceItem {
