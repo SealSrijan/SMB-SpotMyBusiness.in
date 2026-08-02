@@ -6,7 +6,7 @@ interface ClientData {
   id: string;
   name: string;
   website: string;
-  // traffic: string;
+  traffic: string;
   leads: string;
   reviews: string;
   visibility: string;
@@ -19,7 +19,7 @@ const staticClients: ClientData[] = [
     id: "1",
     name: "Science Squad Dankuni",
     website: "https://science-squad-dankuni.localo.site/",
-    // traffic: "100% Organic Traffic",
+    traffic: "100% Organic Traffic",
     leads: "3x Leads Generated",
     reviews: "5.0 Star Rating (30+)",
     visibility: "#1 Google Maps Position",
@@ -28,36 +28,36 @@ const staticClients: ClientData[] = [
   },
   {
     id: "2",
-    name: "Urban Cafe",
-    website: "https://urbancafe.coffee",
-    traffic: "+280% Foot Traffic",
-    leads: "8.5x Daily Bookings",
-    reviews: "4.8 Star Rating (340+)",
-    visibility: "Top 3 Local Pack",
-    initials: "UC",
-    desc: "A busy metropolitan coffee shop and bakery ranking on Google Maps for tourist searches.",
+    name: "Bharat Relocators",
+    website: "https://bharatrelocators.com/",
+    traffic: "+200% Organic Traffic",
+    leads: "4x Daily Bookings",
+    reviews: "4.9 Star Rating (300+)",
+    visibility: "Top 1 Relocators in Haltu",
+    initials: "BR",
+    desc: "Bharat Relocators is an award-winning moving and relocating company in Kolkata",
   },
   {
     id: "3",
-    name: "Vitals Pharmacy",
-    website: "https://vitalspharmacy.com",
+    name: "Nayak Decorators and Caterer",
+    website: "https://nayakcaterer.com/kolkata/caterers-in-behala",
     traffic: "+180% Search Impressions",
-    leads: "6.2x Prescription Calls",
-    reviews: "4.9 Star Rating (200+)",
+    leads: "5x Prescription Calls",
+    reviews: "4.8 Star Rating (50+)",
     visibility: "#1 Near Me Searches",
-    initials: "VP",
-    desc: "A community-focused local pharmacy ranking first for medical prescription lookups.",
+    initials: "NDC",
+    desc: "Nayak Decorators and Caterer in Behala is considered the best caterer in Behala.",
   },
   {
     id: "4",
-    name: "Starlight Salon",
-    website: "https://starlightbeauty.com",
+    name: "Republic Packers and Movers",
+    website: "https://republicpackers.com/kolkata-packers-movers-west-bengal",
     traffic: "+310% Online Bookings",
-    leads: "9.8x Customer Leads",
-    reviews: "4.7 Star Rating (410+)",
+    leads: "10x Customer Leads",
+    reviews: "4.7 Star Rating (600+)",
     visibility: "#1 Salon in Area",
     initials: "SS",
-    desc: "A luxury beauty salon booking appointments 24/7 through Google Maps.",
+    desc: "Republic is Your Trusted Packers and Movers in Kolkata.",
   },
 ];
 
