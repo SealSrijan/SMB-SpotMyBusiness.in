@@ -55,8 +55,8 @@ const staticClients: ClientData[] = [
     traffic: "+310% Online Bookings",
     leads: "10x Customer Leads",
     reviews: "4.7 Star Rating (600+)",
-    visibility: "#1 Salon in Area",
-    initials: "SS",
+    visibility: "Best Packers and Movers Kolkata",
+    initials: "RPM",
     desc: "Republic is Your Trusted Packers and Movers in Kolkata.",
   },
 ];
