@@ -13,7 +13,7 @@ import Services from "@/components/Services";
 import Process from "@/components/Process";
 import Results from "@/components/Results";
 import ClientShowcase from "@/components/ClientShowcase";
-import Testimonials from "@/components/Testimonials";
+// import Testimonials from "@/components/Testimonials";
 import Comparison from "@/components/Comparison";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -146,7 +146,7 @@ export default function Home() {
             <Process />
             <Results />
             <ClientShowcase />
-            <Testimonials />
+            {/* <Testimonials /> */}
             <Comparison />
             <Contact />
             <Footer />
