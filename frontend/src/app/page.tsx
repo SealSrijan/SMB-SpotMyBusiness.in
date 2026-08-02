@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import TrustMarquee from "@/components/TrustMarquee";
 import About from "@/components/About";
 import Services from "@/components/Services";
-import SEOCommandCenter from "@/components/SEOCommandCenter";
+// import SEOCommandCenter from "@/components/SEOCommandCenter";
 import Process from "@/components/Process";
 import Results from "@/components/Results";
 import ClientShowcase from "@/components/ClientShowcase";
@@ -142,7 +142,7 @@ export default function Home() {
             <TrustMarquee />
             <About />
             <Services />
-            <SEOCommandCenter />
+            {/* <SEOCommandCenter /> */}
             <Process />
             <Results />
             <ClientShowcase />
