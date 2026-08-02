@@ -4,7 +4,7 @@ import { useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-// import LoadingScreen from "@/components/LoadingScreen";
+import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import TrustMarquee from "@/components/TrustMarquee";
 import About from "@/components/About";
