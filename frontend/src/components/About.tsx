@@ -8,12 +8,12 @@ export default function About() {
     {
       title: "Our Mission",
       icon: <Target className="w-6 h-6 text-bronze" />,
-      desc: "To empower local businesses with enterprise-level SEO strategies. We bridge the gap between physical shops and local search results, transforming searchers into loyal, paying customers.",
+      desc: "To deliver reliable, affordable, and result-driven digital solutions through innovation, transparency,and dedication, helping local businesses enhance their online presence, attract more customers, and achieve measurable, long-term growth. ",
     },
     {
       title: "Our Vision",
       icon: <Eye className="w-6 h-6 text-light-bronze" />,
-      desc: "To be the global benchmark for digital visibility. We envision a future where every local business, from neighborhood cafes to multi-location clinics, is instantly discoverable when needed.",
+      desc: "Inspired by Swami Vivekananda's timeless call to persevere until the goal is reached, we envision empowering every local business with digital excellence, lasting growth, stronger customer trust, and sustainable success.",
     },
     {
       title: "Our Values",
