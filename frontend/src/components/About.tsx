@@ -57,7 +57,7 @@ export default function About() {
               className="space-y-4 text-gray-text text-base leading-relaxed"
             >
               <p>
-                Spot My Business was founded on a simple truth: search engines are the modern yellow pages, but the competition is fiercer than ever. Appearing on page two of search results or being buried in Google Maps is the equivalent of being invisible.
+                Spot My Business is a results-driven marketing agency serving businesses across Kolkata. We provide expert digital marketing services designed to accelerate growth through strategic GMB optimization and comprehensive digital marketing strategies. Our team specializes in social media marketing and broader media marketing to enhance online visibility and attract high-quality leads. We stand out by combining innovation with transparency and reliability, ensuring every client achieves measurable success in a competitive landscape. We prioritize sustainable growth and data-backed results to help brands dominate their local markets. Contact us today to request a quote and scale your digital presence.
               </p>
               <p>
                 We construct digital infrastructure that helps local businesses capture their immediate neighborhood markets. By combining technical search engine optimization, advanced map ranking strategies, and review automation, we build authoritative, high-conversion brands.
