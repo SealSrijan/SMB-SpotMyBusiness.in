@@ -6,7 +6,7 @@ interface ClientData {
   id: string;
   name: string;
   website: string;
-  traffic: string;
+  // traffic: string;
   leads: string;
   reviews: string;
   visibility: string;
@@ -17,14 +17,14 @@ interface ClientData {
 const staticClients: ClientData[] = [
   {
     id: "1",
-    name: "Science Squad",
-    website: "https://sciencesquad.com",
-    traffic: "+420% Organic Traffic",
-    leads: "12x Leads Generated",
-    reviews: "4.9 Star Rating (120+)",
+    name: "Science Squad Dankuni",
+    website: "https://science-squad-dankuni.localo.site/",
+    // traffic: "100% Organic Traffic",
+    leads: "3x Leads Generated",
+    reviews: "5.0 Star Rating (30+)",
     visibility: "#1 Google Maps Position",
     initials: "SS",
-    desc: "An elite educational coaching center dominating high-intent student searches.",
+    desc: "Science Squad Dankuni provides expert coaching for students seeking academic excellence in Dankuni.",
   },
   {
     id: "2",
