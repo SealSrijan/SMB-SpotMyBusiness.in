@@ -11,7 +11,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 // import SEOCommandCenter from "@/components/SEOCommandCenter";
 import Process from "@/components/Process";
-import Results from "@/components/Results";
+// import Results from "@/components/Results";
 import ClientShowcase from "@/components/ClientShowcase";
 // import Testimonials from "@/components/Testimonials";
 import Comparison from "@/components/Comparison";
@@ -144,7 +144,7 @@ export default function Home() {
             <Services />
             {/* <SEOCommandCenter /> */}
             <Process />
-            <Results />
+            {/* <Results /> */}
             <ClientShowcase />
             {/* <Testimonials /> */}
             <Comparison />
