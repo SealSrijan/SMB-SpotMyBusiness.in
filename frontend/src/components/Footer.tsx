@@ -100,17 +100,32 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Details (4 cols) */}
-          <div className="md:col-span-4 space-y-4">
-            <h4 className="text-xs uppercase tracking-[0.2em] text-heading font-bold">
-              Contact Info
-            </h4>
-            <div className="space-y-2 text-xs text-gray-text leading-relaxed font-medium">
-              <p>Middle Rd, Sen Para, Santoshpur, Kolkata, West Bengal 700075</p>
-              <p className="pt-2">Phone: +91-9007960333/ +91-8597913452</p>
-              <p>Email: smb.spot.my.business@gmail.com</p>
-            </div>
-          </div>
+          {/* Contact & Map (4 cols) */}
+<div className="md:col-span-4 space-y-4">
+  <h4 className="text-xs uppercase tracking-[0.2em] text-heading font-bold">
+    Find Us
+  </h4>
+
+  <div className="overflow-hidden rounded-xl border border-border-color">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.222150801929!2d88.3806334!3d22.4958468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027174483eab37%3A0xdff839b9e9c6b474!2sSpot%20My%20Business!5e0!3m2!1sen!2sin!4v1785688925625!5m2!1sen!2sin"
+      width="100%"
+      height="220"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="strict-origin-when-cross-origin"
+      title="Spot My Business Location"
+      className="w-full"
+    />
+  </div>
+
+  <div className="space-y-2 text-xs text-gray-text leading-relaxed font-medium">
+    <p>Middle Rd, Sen Para, Santoshpur, Kolkata, West Bengal 700075</p>
+    <p>Phone: +91 9007960333 / +91 8597913452</p>
+    <p>Email: smb.spot.my.business@gmail.com</p>
+  </div>
+</div>
 
         </div>
 
