@@ -106,10 +106,9 @@ export default function Footer() {
               Contact Info
             </h4>
             <div className="space-y-2 text-xs text-gray-text leading-relaxed font-medium">
-              <p>500 Terry Francine St.</p>
-              <p>San Francisco, CA 94158</p>
-              <p className="pt-2">Phone: +1 (800) 555-7265</p>
-              <p>Email: grow@spotmybusiness.com</p>
+              <p>Middle Rd, Sen Para, Santoshpur, Kolkata, West Bengal 700075</p>
+              <p className="pt-2">Phone: +91-9007960333/ +91-8597913452</p>
+              <p>Email: smb.spot.my.business@gmail.com</p>
             </div>
           </div>
 
