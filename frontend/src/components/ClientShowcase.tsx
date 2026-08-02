@@ -47,14 +47,14 @@ export default function ClientShowcase() {
         setClients([
           {
             id: "1",
-            name: "Science Squad Dankuni",
-            website: "https://science-squad-dankuni.localo.site/",
-            traffic: "+230% Organic Visibility",
-            leads: "3x Leads Generated",
-            reviews: "5.0 Star Rating (30+)",
+            name: "Science Squad",
+            website: "https://sciencesquad.com",
+            traffic: "+420% Organic Traffic",
+            leads: "12x Leads Generated",
+            reviews: "4.9 Star Rating (120+)",
             visibility: "#1 Google Maps Position",
             initials: "SS",
-            desc: "Science Squad Dankuni provides expert coaching for students seeking academic excellence in Dankuni."
+            desc: "An elite educational coaching center dominating high-intent student searches."
           },
           {
             id: "2",
