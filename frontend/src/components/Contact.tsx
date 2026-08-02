@@ -255,6 +255,9 @@ export default function Contact() {
 
                     <button
                       type="submit"
+                      onClick={() => {
+                      window.location.href =
+                      "mailto:smb.spot.my.business@gmail.com?subject=Free SEO Audit Request";
                       disabled={isSubmitting}
                       className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-bronze to-light-bronze font-heading text-xs tracking-[0.25em] uppercase font-bold text-heading hover:shadow-lg hover:shadow-bronze/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                     >
