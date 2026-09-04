@@ -50,7 +50,7 @@ export default function Home() {
       <LenisScroll />
 
       {/* Loading Animation */}
-      <LoadingScreen onComplete={handleLoadingComplete} />
+      <LoadingScreen />
 
       {/* Primary Web Layout (reveals after loading completes) */}
       <AnimatePresence>
