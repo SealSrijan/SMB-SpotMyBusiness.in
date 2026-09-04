@@ -16,14 +16,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Spot My Business | Global SEO Partner & Digital Dominance",
-  description: "Spot My Business (SMB) is an elite global SEO partner. We build digital dominance for local and multi-location businesses, driving traffic, phone calls, and leads.",
-  keywords: ["Local SEO", "Google Business Profile", "SEO Agency", "Google Maps Optimization", "Digital Visibility", "SMB SEO"],
+  title: "Google Business Profile & Local SEO Services | Spot My Business",
+  description: "Grow your Google Maps visibility, attract more local customers and generate enquiries with Google Business Profile optimization, Local SEO and digital marketing.",
+  keywords: ["Google Business Profile Optimization",
+    "Local SEO",
+    "Google Maps Optimization",
+    "Local SEO Agency",
+    "Google Business Profile Management",
+    "SEO Services",
+    "Digital Marketing"],
   authors: [{ name: "Spot My Business" }],
   openGraph: {
-    title: "Spot My Business | Global SEO Partner & Digital Dominance",
-    description: "We don't just improve rankings. We build digital dominance. Spot My Business helps companies become impossible to ignore.",
-    url: "https://spotmybusiness.com",
+    title: "Google Business Profile & Local SEO Services | Spot My Business",
+    description: "Grow your Google Maps visibility, attract more local customers and generate enquiries with Google Business Profile optimization, Local SEO and digital marketing.",
+    url: "https://spotmybusiness.in",
     siteName: "Spot My Business",
     images: [
       {
@@ -70,22 +76,22 @@ export default function RootLayout({
     "@type": "LocalBusiness",
     "name": "Spot My Business",
     "alternateName": "SMB",
-    "image": "https://spotmybusiness.com/assets/logo.jpg",
-    "url": "https://spotmybusiness.com",
-    "telephone": "+1-555-789-0123",
+    "image": "https://spotmybusiness.in/assets/logo.jpg",
+    "url": "https://spotmybusiness.in",
+    "telephone": "+91-9007960333",
     "priceRange": "$$$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "500 Terry Francine St.",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
-      "postalCode": "94158",
-      "addressCountry": "US"
+      "streetAddress": "Middle Rd, Sen Para",
+      "addressLocality": "Santoshpur",
+      "addressRegion": "Kolkata",
+      "postalCode": "700075",
+      "addressCountry": "IN"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 37.7749,
-      "longitude": -122.4194
+      "latitude": 22.495909466723468,
+      "longitude": 88.38062498633192
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -96,8 +102,8 @@ export default function RootLayout({
         "Thursday",
         "Friday"
       ],
-      "opens": "09:00",
-      "closes": "18:00"
+      "opens": "12:00",
+      "closes": "12:00"
     },
     "sameAs": [
       "https://www.facebook.com/spotmybusiness",
