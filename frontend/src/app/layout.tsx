@@ -79,12 +79,12 @@ export default function RootLayout({
     "image": "https://spotmybusiness.in/assets/logo.jpg",
     "url": "https://spotmybusiness.in",
     "telephone": "+91-9007960333",
-    "priceRange": "$$$$",
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Middle Rd, Sen Para",
-      "addressLocality": "Santoshpur",
-      "addressRegion": "Kolkata",
+      "streetAddress": "Middle Rd, Sen Para, Santoshpur",
+      "addressLocality": "Kolkata",
+      "addressRegion": "West Bengal",
       "postalCode": "700075",
       "addressCountry": "IN"
     },
@@ -108,7 +108,7 @@ export default function RootLayout({
     "sameAs": [
       "https://www.facebook.com/spotmybusiness",
       "https://twitter.com/spotmybusiness",
-      "https://www.linkedin.com/company/spotmybusiness"
+      "https://www.linkedin.com/company/spot-my-business"
     ]
   };
 
