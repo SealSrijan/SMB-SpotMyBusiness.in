@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Phone } from "lucide-react";
 
 import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
@@ -117,13 +118,13 @@ export default function Home() {
                 }}
                 className="flex flex-wrap gap-4"
               >
-                <button
-                  onClick={() => handleScrollTo("contact")}
-                  className="flex items-center gap-2 rounded-full bg-gradient-to-r from-bronze to-light-bronze px-8 py-4 text-xs font-bold uppercase tracking-[0.25em] text-white transition-all duration-300 hover:shadow-lg hover:shadow-bronze/20"
-                >
-                  Get Started
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </button>
+<a
+  href="tel:+919007960333"
+  className="flex items-center gap-2 rounded-full bg-gradient-to-r from-bronze to-light-bronze px-8 py-4 text-xs font-bold uppercase tracking-[0.25em] text-white transition-all duration-300 hover:shadow-lg hover:shadow-bronze/20"
+>
+  <Phone className="h-3.5 w-3.5" />
+  Call Us
+</a>
 
                 <button
                   onClick={() => handleScrollTo("services")}
