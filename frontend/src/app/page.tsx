@@ -87,11 +87,11 @@ export default function Home() {
                       Elite SEO Architects
                     </span>
                     <h1 className="text-4xl sm:text-5xl md:text-[54px] font-heading font-extrabold tracking-tight text-heading leading-[1.08] uppercase">
-                      We Don&#39;t Just Improve Rankings.
-                      <span className="block text-transparent bg-clip-text bg-gradient-to-r from-bronze via-light-bronze to-champagne mt-2 drop-shadow-sm">
-                        We Build Digital Dominance.
-                      </span>
-                    </h1>
+  Google Business Profile
+  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-bronze via-light-bronze to-champagne mt-2 drop-shadow-sm">
+    & Local SEO Experts.
+  </span>
+</h1>
                   </motion.div>
 
                   <motion.p
@@ -100,7 +100,7 @@ export default function Home() {
                     transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
                     className="text-gray-text text-base md:text-lg max-w-xl leading-relaxed font-normal"
                   >
-                    Helping businesses become impossible to ignore through technical SEO, Google Business Profile optimization, local search networks, and high-converting reputation growth.
+                    We help local businesses improve Google Maps visibility, attract more local customers, and generate qualified enquiries through Google Business Profile optimization and Local SEO.
                   </motion.p>
 
                   <motion.div
