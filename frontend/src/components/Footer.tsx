@@ -35,7 +35,7 @@ export default function Footer() {
                   SPOT MY BUSINESS
                 </span>
                 <span className="text-[8px] tracking-[0.3em] text-light-bronze uppercase font-medium mt-1">
-                  Global SEO Partner
+                  Local SEO & GBP Experts
                 </span>
               </div>
             </div>
