@@ -97,11 +97,11 @@ export default function Navbar() {
               Services
             </a>
             <a
-              href="#command-center"
-              onClick={(e) => handleNavClick(e, "command-center")}
+              href="#process"
+              onClick={(e) => handleNavClick(e, "process")}
               className="text-xs tracking-[0.2em] uppercase font-medium text-gray-text hover:text-light-bronze transition-colors duration-300"
             >
-              Command Center
+              Our Process
             </a>
 
             {/* Theme Switcher */}
@@ -160,11 +160,11 @@ export default function Navbar() {
               Services
             </a>
             <a
-              href="#command-center"
-              onClick={(e) => handleNavClick(e, "command-center")}
+              href="#process"
+              onClick={(e) => handleNavClick(e, "process")}
               className="text-lg tracking-[0.2em] uppercase font-semibold text-gray-text hover:text-heading transition-colors"
             >
-              Command Center
+              Our Process
             </a>
             <a
               href="#contact"
