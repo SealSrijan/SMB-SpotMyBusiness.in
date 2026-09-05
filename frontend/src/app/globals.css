@@ -47,11 +47,18 @@ body {
   --color-primary-bg: #F5F0EA;
   --color-secondary-bg: #EBE3D9;
   --color-white-text: #1A1A1A;
-  --color-gray-text: #5A5A5A;
+  --color-gray-text: #333333;
   --color-border-color: #D1C5B6;
   --color-heading: #1A1A1A;
   --background: #F5F0EA;
   --foreground: #1A1A1A;
+}
+
+/* Bronze text needs a darker value on the light canvas to retain WCAG AA contrast. */
+[data-theme="light"] {
+  --color-bronze: #704421;
+  --color-light-bronze: #704421;
+  --color-champagne: #5C361A;
 }
 
 /* Glassmorphism — Dark Theme (default) */
