@@ -81,9 +81,9 @@ export default function Footer() {
 
           {/* Quick Links (3 cols) */}
           <div className="md:col-span-3 space-y-4">
-            <h4 className="text-xs uppercase tracking-[0.2em] text-heading font-bold">
+            <p className="text-xs uppercase tracking-[0.2em] text-heading font-bold">
               Quick Links
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-xs text-gray-text font-medium">
               <li>
                 <a href="#about" className="hover:text-light-bronze transition-colors">About Us</a>
@@ -92,7 +92,7 @@ export default function Footer() {
                 <a href="#services" className="hover:text-light-bronze transition-colors">Industries We Serve</a>
               </li>
               <li>
-                <a href="#command-center" className="hover:text-light-bronze transition-colors">Command Center</a>
+                <a href="#process" className="hover:text-light-bronze transition-colors">Our Process</a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-light-bronze transition-colors">Get A Free Audit</a>
@@ -102,9 +102,9 @@ export default function Footer() {
 
           {/* Contact & Map (4 cols) */}
 <div className="md:col-span-4 space-y-4">
-  <h4 className="text-xs uppercase tracking-[0.2em] text-heading font-bold">
+  <p className="text-xs uppercase tracking-[0.2em] text-heading font-bold">
     Find Us
-  </h4>
+  </p>
 
   <div className="overflow-hidden rounded-xl border border-border-color">
     <iframe
