@@ -221,7 +221,7 @@ export default function Services() {
             INDUSTRIES WE DOMINATE
           </h2>
           <p className="text-gray-text text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            We don't believe in boilerplate SEO. We have designed hyper-targeted maps optimization engines for specialized consumer industries.
+            We don&apos;t believe in boilerplate SEO. We have designed hyper-targeted maps optimization engines for specialized consumer industries.
           </p>
         </div>
 
