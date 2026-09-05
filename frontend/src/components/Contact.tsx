@@ -42,7 +42,7 @@ export default function Contact() {
     },
   });
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async () => {
     setIsSubmitting(true);
     setSubmitError(null);
 
@@ -82,7 +82,7 @@ export default function Contact() {
                 GET STARTED
               </span>
               <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-heading leading-tight">
-                LET'S SECURE YOUR DOMINANCE
+                LET&apos;S SECURE YOUR DOMINANCE
               </h2>
               <p className="text-gray-text text-base leading-relaxed">
                 Connect with our local search architects. We will conduct a thorough, manual review of your current maps indexing, keyword rankings, and competitor authority to design a tailored growth blueprint.
