@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { useRef, useEffect } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Sparkles, Html } from "@react-three/drei";
 import * as THREE from "three";
 
@@ -62,7 +62,7 @@ function FloatingNode({ name, pos, icon, color, mousePos }: NodeData & { mousePo
 }
 
 // Lines Connecting Nodes
-function ConnectingLines({ nodesRefs, mousePos }: { nodesRefs: React.MutableRefObject<THREE.Group[]>, mousePos: React.MutableRefObject<{ x: number; y: number }> }) {
+function ConnectingLines({ nodesRefs }: { nodesRefs: React.MutableRefObject<THREE.Group[]> }) {
   const lineGeomRef = useRef<THREE.BufferGeometry>(null);
 
   useFrame(() => {
@@ -112,7 +112,6 @@ function ConnectingLines({ nodesRefs, mousePos }: { nodesRefs: React.MutableRefO
 function Scene() {
   const mousePos = useRef({ x: 0, y: 0 });
   const nodesRefs = useRef<THREE.Group[]>([]);
-  const { size } = useThree();
 
   const nodeList: NodeData[] = [
     { name: "SMB Hub", pos: [0, 0, 0], icon: "✨", color: "#E7D3B0" }, // Center Node
@@ -157,20 +156,12 @@ function Scene() {
       ))}
 
       {/* Connective Web Lines */}
-      <ConnectingLines nodesRefs={nodesRefs} mousePos={mousePos} />
+      <ConnectingLines nodesRefs={nodesRefs} />
     </>
   );
 }
 
 export default function Hero3D() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
     <div className="w-full h-[500px] md:h-[650px] relative cursor-grab active:cursor-grabbing">
       {/* Background radial gradient representing glow */}
