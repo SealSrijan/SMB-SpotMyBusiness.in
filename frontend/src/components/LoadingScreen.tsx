@@ -112,9 +112,9 @@ export default function LoadingScreen() {
                 duration: 0.5,
               }}
             >
-              <h2 className="text-2xl font-heading font-bold tracking-[0.25em] text-heading uppercase">
+              <p className="text-2xl font-heading font-bold tracking-[0.25em] text-heading uppercase">
                 Spot My Business
-              </h2>
+              </p>
 
               <span className="mt-2 text-xs font-medium uppercase tracking-[0.35em] text-light-bronze">
                 Local SEO & Google Business Profile Experts
