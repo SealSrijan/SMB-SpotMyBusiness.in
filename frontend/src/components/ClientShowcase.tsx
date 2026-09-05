@@ -79,8 +79,9 @@ function ClientCard({ client }: { client: ClientData }) {
             target="_blank"
             rel="noopener noreferrer"
             className="p-2.5 rounded-full border border-border-color bg-secondary-bg text-gray-text hover:text-white hover:border-bronze/50 transition-colors"
+            aria-label={`Visit ${client.name} website`}
           >
-            <ExternalLink size={16} />
+            <ExternalLink size={16} aria-hidden="true" />
           </a>
         </div>
 
