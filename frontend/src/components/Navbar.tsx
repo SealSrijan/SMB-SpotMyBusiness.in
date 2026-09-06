@@ -60,14 +60,15 @@ export default function Navbar() {
               }}
               className="flex items-center gap-3 group"
             >
-              <div className="relative w-11 h-11 rounded-full overflow-hidden border border-border-color bg-secondary-bg transition-transform duration-500 group-hover:scale-105 group-hover:border-bronze">
+              <div className="w-11 h-11 rounded-full overflow-hidden border border-border-color bg-secondary-bg transition-transform duration-500 group-hover:scale-105 group-hover:border-bronze">
                 <Image
-                  src="/assets/logo.jpg"
-                  alt="Spot My Business Logo"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+  src="/assets/logo.jpg"
+  alt="Spot My Business Logo"
+  width={44}
+  height={44}
+  className="h-11 w-11 object-cover"
+  priority
+/>
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-bold tracking-[0.15em] text-heading text-[16px] md:text-[17px] leading-none">
