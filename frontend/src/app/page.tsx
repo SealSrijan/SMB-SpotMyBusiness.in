@@ -1,6 +1,4 @@
-"use client";
 
-import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 
 import LoadingScreen from "@/components/LoadingScreen";
@@ -25,15 +23,7 @@ export default function Home() {
       <LoadingScreen />
 
       {/* Primary Web Layout */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 0.5,
-          ease: "easeOut",
-        }}
-        className="flex min-h-screen flex-col relative"
-      >
+      <div className="flex min-h-screen flex-col relative">
         <Navbar />
 
         <main id="main-content">
@@ -73,7 +63,7 @@ export default function Home() {
                     & Local SEO Experts.
                   </span>
                 </h1>
-              </motion.div>
+              </div>
 
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
