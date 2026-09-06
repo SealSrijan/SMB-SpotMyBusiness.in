@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState} from "react";
 import { motion } from "framer-motion";
 
 function useIndianTime() {
@@ -70,26 +70,6 @@ function BatteryIcon() {
   );
 }
 
-export default function PhoneMockup() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const containerRef = useRef<HTMLDivElement>(null);
-  const indiaTime = useIndianTime();
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-      setMousePos({
-        x: (e.clientX - centerX) / rect.width,
-        y: (e.clientY - centerY) / rect.height,
-      });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
 
   return (
     <div
