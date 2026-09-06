@@ -1,7 +1,7 @@
 
 import { Phone } from "lucide-react";
 
-import LoadingScreen from "@/components/LoadingScreen";
+// import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import TrustMarquee from "@/components/TrustMarquee";
 import About from "@/components/About";
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       {/* Loading Animation */}
-      <LoadingScreen />
+      {/* <LoadingScreen /> */}
 
       {/* Primary Web Layout */}
       <div className="flex min-h-screen flex-col relative">
