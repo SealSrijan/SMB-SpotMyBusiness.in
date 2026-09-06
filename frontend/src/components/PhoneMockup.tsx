@@ -1,31 +1,3 @@
-"use client";
-
-import { useEffect, useState} from "react";
-import { motion } from "framer-motion";
-
-function useIndianTime() {
-  const [time, setTime] = useState("");
-
-  useEffect(() => {
-    const update = () => {
-      const now = new Date();
-      const istOffset = 5.5 * 60 * 60 * 1000;
-      const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-      const ist = new Date(utc + istOffset);
-      const hours = ist.getHours();
-      const mins = ist.getMinutes().toString().padStart(2, "0");
-      const h12 = hours % 12 || 12;
-      setTime(`${h12}:${mins}`);
-    };
-
-    update();
-    const interval = setInterval(update, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return time;
-}
-
 /* ─── SVG Status Bar Icons ─── */
 
 function CellularIcon() {
@@ -71,41 +43,20 @@ function BatteryIcon() {
 }
 
 
+export default function PhoneMockup() {
   return (
     <div
-      ref={containerRef}
       className="relative w-full flex flex-col items-center justify-center py-4"
     >
       {/* Ambient glow behind phone */}
       <div className="absolute w-72 h-72 rounded-full bg-bronze/15 blur-[80px] pointer-events-none" />
       <div className="absolute w-48 h-48 rounded-full bg-light-bronze/10 blur-[60px] pointer-events-none translate-y-20" />
 
-      {/* Floating SEO Particles — PROMINENT */}
-      <FloatingParticles />
-
-      {/* Floating Phone */}
-      <motion.div
-        initial={{ opacity: 0, y: 60, scale: 0.9 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        style={{
-          x: mousePos.x * 12,
-          y: mousePos.y * 8,
-        }}
+      {/* Phone */}
+      <div
         className="relative z-10"
       >
-        {/* Floating animation wrapper */}
-        <motion.div
-          animate={{
-            y: [0, -8, 0],
-            rotateY: [0, 1, 0],
-            rotateX: [0, -0.5, 0],
-          }}
-          transition={{
-            duration: 6,
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
+        <div
           className="relative"
         >
           {/* Phone glow ring */}
@@ -126,7 +77,7 @@ function BatteryIcon() {
             <div className="absolute top-[11px] left-0 right-0 flex justify-between items-center px-[22px] z-10">
               {/* Left: Time */}
               <span className="text-[10px] text-white font-semibold leading-none tracking-tight">
-                {indiaTime || "5:13"}
+                5:13
               </span>
 
               {/* Right: Cellular + WiFi + Battery */}
@@ -142,10 +93,7 @@ function BatteryIcon() {
               <div className="flex flex-col h-full pt-[38px]">
                 {/* Google Header */}
                 <div className="flex items-center justify-between px-4 pb-2">
-                  <motion.span
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.8 }}
+                  <span
                     className="text-[14px] font-medium tracking-tight"
                     style={{
                       background:
@@ -155,17 +103,14 @@ function BatteryIcon() {
                     }}
                   >
                     Google
-                  </motion.span>
+                  </span>
                   <div className="w-[22px] h-[22px] rounded-full bg-gradient-to-br from-amber-600 to-amber-800 flex items-center justify-center overflow-hidden border border-amber-700/50">
                     <span className="text-[9px] text-white font-bold">S</span>
                   </div>
                 </div>
 
                 {/* Search Bar */}
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.0 }}
+                <div
                   className="mx-3 mb-2 px-3 py-[6px] bg-[#303134] rounded-full flex items-center gap-2"
                 >
                   <svg
@@ -209,13 +154,10 @@ function BatteryIcon() {
                       <circle cx="12" cy="12" r="3" />
                     </svg>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Category Tabs */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.2 }}
+                <div
                   className="flex gap-3 px-3 pb-2 border-b border-[#3C4043] text-[8px] overflow-hidden"
                 >
                   <span className="text-[#9AA0A6] whitespace-nowrap">
@@ -232,15 +174,12 @@ function BatteryIcon() {
                   <span className="text-[#9AA0A6] whitespace-nowrap">
                     Short vi...
                   </span>
-                </motion.div>
+                </div>
 
                 {/* Search Results — Scrollable */}
                 <div className="flex-1 overflow-y-auto px-3 pt-2 space-y-1">
                   {/* Result 1 — Science Squad (highlighted #1) */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.4, duration: 0.5 }}
+                  <div
                     className="relative p-2 rounded-xl"
                     style={{
                       background:
@@ -286,13 +225,10 @@ function BatteryIcon() {
                       <ActionBtn icon="🌐" label="Website" />
                       <ActionBtn icon="💬" label="Text" />
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* Result 2 — Excellent Tutorial */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.7, duration: 0.5 }}
+                  <div
                     className="p-2 border-t border-[#3C4043]"
                   >
                     <div className="flex justify-between items-start">
@@ -325,13 +261,10 @@ function BatteryIcon() {
                       <ActionBtn icon="🌐" label="Website" />
                       <ActionBtn icon="💬" label="Wha..." />
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* Result 3 — Tutelage (partial) */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 2.0, duration: 0.5 }}
+                  <div
                     className="p-2 border-t border-[#3C4043]"
                   >
                     <div className="flex justify-between items-start">
@@ -360,21 +293,18 @@ function BatteryIcon() {
                       <ActionBtn icon="🧭" label="Directions" />
                       <ActionBtn icon="📤" label="Share" />
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
 
                 {/* Bottom Nav Bar */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 2.2 }}
+                <div
                   className="flex justify-around items-center px-2 py-1.5 border-t border-[#3C4043] bg-[#1F1F1F]"
                 >
                   <NavItem icon="🏠" label="Home" />
                   <NavItem icon="🔍" label="Search" active />
                   <NavItem icon="🔔" label="Notifications" badge />
                   <NavItem icon="⚙️" label="Activity" />
-                </motion.div>
+                </div>
 
                 {/* Home Indicator */}
                 <div className="flex justify-center py-1 bg-[#1F1F1F]">
@@ -383,20 +313,15 @@ function BatteryIcon() {
               </div>
             </div>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* "THIS CAN BE YOU" — OUTSIDE the phone, on the website */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.5, duration: 0.7 }}
+      <div
         className="relative z-10 mt-6 flex flex-col items-center"
       >
         {/* Animated Upward Arrow */}
-        <motion.div
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
+        <div
           className="mb-2"
         >
           <svg
@@ -420,7 +345,7 @@ function BatteryIcon() {
               </linearGradient>
             </defs>
           </svg>
-        </motion.div>
+        </div>
 
         <p className="text-[15px] md:text-[17px] font-heading font-bold text-heading tracking-[0.2em] uppercase">
           This Can Be You
@@ -432,7 +357,7 @@ function BatteryIcon() {
           </span>
           <div className="w-6 h-[1px] bg-gradient-to-l from-transparent to-bronze/60" />
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
@@ -474,50 +399,6 @@ function NavItem({
       >
         {label}
       </span>
-    </div>
-  );
-}
-
-function FloatingParticles() {
-  const particles = [
-    { x: -140, y: -70, label: "Google Search", icon: "🔍", delay: 0 },
-    { x: 150, y: -90, label: "Google Maps", icon: "📍", delay: 0.4 },
-    { x: -120, y: 90, label: "Reviews", icon: "⭐", delay: 0.8 },
-    { x: 160, y: 70, label: "Analytics", icon: "📊", delay: 1.2 },
-    { x: -70, y: -140, label: "Traffic", icon: "📈", delay: 0.6 },
-    { x: 90, y: 140, label: "Rankings", icon: "🏆", delay: 1.0 },
-    { x: -160, y: 10, label: "Leads", icon: "👥", delay: 1.4 },
-    { x: 140, y: -20, label: "Visibility", icon: "🌐", delay: 0.2 },
-  ];
-
-  return (
-    <div className="absolute inset-0 pointer-events-none z-0">
-      {particles.map((p, i) => (
-        <motion.div
-          key={i}
-          className="absolute left-1/2 top-[45%] flex items-center gap-2 px-3 py-1.5 rounded-full border border-bronze/15 bg-secondary-bg/70 shadow-lg shadow-black/20"
-          style={{ backdropFilter: "blur(8px)" }}
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{
-            opacity: [0, 0.85, 0.65, 0.85],
-            scale: 1,
-            x: [p.x, p.x + 12, p.x - 8, p.x],
-            y: [p.y, p.y - 10, p.y + 6, p.y],
-          }}
-          transition={{
-            delay: 1.2 + p.delay,
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        >
-          <span className="text-[14px]">{p.icon}</span>
-          <span className="text-[9px] font-heading font-semibold text-gray-text tracking-wider uppercase hidden md:inline">
-            {p.label}
-          </span>
-        </motion.div>
-      ))}
     </div>
   );
 }
