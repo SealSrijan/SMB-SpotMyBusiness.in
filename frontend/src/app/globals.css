@@ -106,7 +106,7 @@ body {
 }
 
 /* Lenis smooth scroll adjustments */
-html.lenis, html.lenis body {
+/* html.lenis, html.lenis body {
   height: auto;
 }
 
@@ -124,7 +124,7 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
-}
+} */
 
 /* Text masking for high-end text reveal effects */
 .text-reveal-mask {
