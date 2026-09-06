@@ -194,9 +194,9 @@ export default function PhoneMockup() {
                       </span>
                     </div>
 
-                    <h4 className="text-[10px] font-semibold text-[#E8EAED] leading-tight pr-4">
+                    <p className="text-[10px] font-semibold text-[#E8EAED] leading-tight pr-4">
                       Science Squad | Best Coaching Centre...
-                    </h4>
+                    </p>
                     <div className="flex items-center gap-1 mt-0.5">
                       <span className="text-[8px] text-[#E8EAED] font-medium">
                         4.9
@@ -232,9 +232,9 @@ export default function PhoneMockup() {
                     className="p-2 border-t border-[#3C4043]"
                   >
                     <div className="flex justify-between items-start">
-                      <h4 className="text-[10px] font-semibold text-[#E8EAED] leading-tight">
+                      <p className="text-[10px] font-semibold text-[#E8EAED] leading-tight">
                         Excellent Tutorial - Jadavpur
-                      </h4>
+                      </p>
                       <span className="text-[8px] text-[#9AA0A6]">⋮</span>
                     </div>
                     <div className="flex items-center gap-1 mt-0.5">
@@ -268,9 +268,9 @@ export default function PhoneMockup() {
                     className="p-2 border-t border-[#3C4043]"
                   >
                     <div className="flex justify-between items-start">
-                      <h4 className="text-[10px] font-semibold text-[#E8EAED] leading-tight">
+                      <p className="text-[10px] font-semibold text-[#E8EAED] leading-tight">
                         Tutelage – Coaching Center by Dr. So...
-                      </h4>
+                      </p>
                       <span className="text-[8px] text-[#9AA0A6]">⋮</span>
                     </div>
                     <div className="flex items-center gap-1 mt-0.5">
