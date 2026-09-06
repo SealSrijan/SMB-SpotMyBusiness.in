@@ -22,14 +22,15 @@ export default function Footer() {
           {/* Brand Info (5 cols) */}
           <div className="md:col-span-5 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-border-color bg-secondary-bg">
-                <Image
-                  src="/assets/logo.jpg"
-                  alt="Spot My Business Logo"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <div className="w-12 h-12 rounded-full overflow-hidden border border-border-color bg-secondary-bg">
+  <Image
+    src="/assets/logo.jpg"
+    alt="Spot My Business Logo"
+    width={48}
+    height={48}
+    className="h-12 w-12 object-cover"
+  />
+</div>
               <div className="flex flex-col">
                 <span className="font-heading font-bold tracking-[0.15em] text-heading text-[16px] leading-none">
                   SPOT MY BUSINESS
