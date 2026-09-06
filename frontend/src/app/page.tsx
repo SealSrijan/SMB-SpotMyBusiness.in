@@ -34,10 +34,6 @@ export default function Home() {
           id="hero"
           className="relative flex min-h-screen items-center overflow-hidden bg-primary-bg pt-24 pb-16 md:pb-24"
         >
-          {/* Radial gradient background lights */}
-          <div className="pointer-events-none absolute left-1/4 top-1/4 h-[600px] w-[600px] rounded-full bg-bronze/5 blur-[120px]" />
-
-          <div className="pointer-events-none absolute bottom-1/4 right-1/4 h-[500px] w-[500px] rounded-full bg-light-bronze/5 blur-[100px]" />
 
           <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 md:px-12 lg:grid-cols-12">
             {/* ==========================================
