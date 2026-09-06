@@ -348,8 +348,8 @@ export default function PhoneMockup() {
         </div>
 
         <p className="text-[15px] md:text-[17px] font-heading font-bold text-white-text tracking-[0.2em] uppercase">
-  This Can Be You
-</p>
+          This Can Be You
+        </p>
       </div>
     </div>
   );
