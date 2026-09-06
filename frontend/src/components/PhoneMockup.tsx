@@ -347,16 +347,9 @@ export default function PhoneMockup() {
           </svg>
         </div>
 
-        <p className="text-[15px] md:text-[17px] font-heading font-bold text-heading tracking-[0.2em] uppercase">
-          This Can Be You
-        </p>
-        <div className="flex items-center gap-2 mt-1.5">
-          <div className="w-6 h-[1px] bg-gradient-to-r from-transparent to-bronze/60" />
-          <span className="text-[9px] text-bronze/80 tracking-[0.25em] uppercase font-medium">
-            Powered by SMB
-          </span>
-          <div className="w-6 h-[1px] bg-gradient-to-l from-transparent to-bronze/60" />
-        </div>
+        <p className="text-[15px] md:text-[17px] font-heading font-bold text-white-text tracking-[0.2em] uppercase">
+  This Can Be You
+</p>
       </div>
     </div>
   );
