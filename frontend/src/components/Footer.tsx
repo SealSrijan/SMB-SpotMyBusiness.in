@@ -132,7 +132,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-border-color/40 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-gray-text/50 uppercase tracking-widest font-semibold">
-          <p>© {new Date().getFullYear()} SPOT MY BUSINESS. ALL RIGHTS RESERVED.</p>
+          <p>© 2026 SPOT MY BUSINESS. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
