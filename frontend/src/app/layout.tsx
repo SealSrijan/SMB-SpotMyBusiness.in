@@ -27,12 +27,6 @@ export const metadata: Metadata = {
   description:
     "Grow your Google Maps visibility, attract more local customers and generate enquiries with Google Business Profile optimization, Local SEO and digital marketing.",
 
-  icons: {
-    icon: "/SMB 4.ico",
-    shortcut: "/SMB 4.ico",
-    apple: "/SMB 4.ico",
-  },
-
   keywords: [
     "Google Business Profile Optimization",
     "Local SEO",
